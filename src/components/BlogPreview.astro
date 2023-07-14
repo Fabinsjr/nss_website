@@ -1,0 +1,61 @@
+---
+import FormattedDate from "./FormattedDate.astro";
+interface Props {
+    title: string;
+    date: Date;
+    link?: string;
+    description: string;
+    heroImage?: string;
+}
+
+const { title, date, link, description, heroImage }: Props = Astro.props;
+---
+
+<div>
+    <h2>{title}</h2>
+    <FormattedDate date={date} />
+    <p>{description}</p>
+    {
+        link && (
+            <>
+                <a href={link}>Read more</a>
+            </>
+        )
+    }
+    {
+        heroImage && (
+            <img
+                src={heroImage}
+                alt=""
+                width="130"
+                height="130"
+                style="flex: 0 0 130px; margin-right: 1rem;"
+            />
+        )
+    }
+</div>
+<style>
+    div {
+        border: 1px solid #ccc;
+        padding: 2rem;
+        width: 100%;
+        background-color: #111111ef;
+        color: #fff;
+    }
+    h2 {
+        margin: 0;
+        font-size: 2rem;
+        color: #fff;
+        font-weight: 400;
+    }
+
+    a {
+        display: block;
+    }
+    img {
+        display: block;
+        margin: 0.5rem 0.5rem 0.5rem 0;
+        width: 60%;
+        height: auto;
+    }
+</style>

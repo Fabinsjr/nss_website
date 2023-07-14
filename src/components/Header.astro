@@ -1,0 +1,39 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../consts";
+import Carousel from "./Carousel.astro";
+---
+
+<header>
+	<div>
+		<img src="/NSS.png" alt="NSS" width="60" height="60" />
+		<h2>
+			{SITE_TITLE}
+		</h2>
+	</div>
+	<Carousel />
+	<nav>
+		<HeaderLink href="/">Home</HeaderLink>
+		<HeaderLink href="/gallery">Gallery</HeaderLink>
+	</nav>
+</header>
+
+<style>
+	div {
+		display: flex;
+		align-items: center;
+		gap: 1em;
+		background-color: #353535;
+		margin: 0 calc((100vw - 100%) / -2);
+		padding: 1.5em calc((100vw - 100%) / 2);
+	}
+	header {
+		margin: 0em 0 2em;
+		max-width: 100vw;
+	}
+	h2 {
+		margin: 0.5em 0;
+		font-family: "Montserrat", sans-serif;
+		color: #fff;
+	}
+</style>

@@ -1,0 +1,43 @@
+---
+const announcements = [
+    "Event 1",
+    "Event 2",
+
+];
+---
+
+<aside class="sidebar">
+    <h3>Announcement</h3>
+    {announcements?.map((announcement) => <p>{announcement}</p>)}
+</aside>
+<style>
+    .sidebar {
+        position: fixed;
+        top: 8rem;
+        left: 80vw;
+        height: auto;
+        max-height: 70vh;
+        overflow-y: expand;
+        width: 15vw;
+        background-color: #000;
+        border-radius: 10px;
+        opacity: 0.8;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        color: #fff;
+    }
+    h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin: 0;
+        color: #1223AA;
+    }
+    @media screen and (max-width: 1450px) {
+        .sidebar {
+            position: static;
+            width: 100%;
+            height: auto;
+            max-height: 40vh;
+        }
+    }
+</style>
