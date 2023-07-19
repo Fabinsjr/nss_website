@@ -36,7 +36,7 @@ import Sidebar from "../components/Sidebar.astro";
             <Sidebar />
             <section>
                 <ul>
-                    
+                    {
                           <li>
                                 <div>
                                     <p>
@@ -46,7 +46,7 @@ import Sidebar from "../components/Sidebar.astro";
                                     </p>
                                 </div>
                             </li>
-
+                    }
                 </ul>   
             </section>
         </main>
@@ -61,6 +61,12 @@ import Sidebar from "../components/Sidebar.astro";
             }
 			a {
                 display: block;
+            }
+            img {
+                display: flex;
+                margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+                width: 60%;
+                height: 100%;
             }
 		</style>
 	</body>
