@@ -29,7 +29,7 @@ body::after{
 	height: 100%;
 	z-index: -1;
 	background:  url('/NSS.png') no-repeat;
-	opacity: 45%;
+	opacity: 30%;
 	background-size: 20rem;
 	background-position: center;
 }
